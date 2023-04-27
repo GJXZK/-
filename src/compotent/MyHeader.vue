@@ -1,10 +1,10 @@
 <template>
   <div class="box">
     <div class="left-box">
-      <div class="text">
+      <div class="text" unselectable="on">
         ROR
       </div>
-      <div class="AI-work">
+      <div class="AI-work" >
         <van-popover v-model:show="showPopover" theme="dark" :actions="actions">
           <template #reference>
             AI工作平台

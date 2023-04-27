@@ -13,15 +13,13 @@
             <!-- 输入框 -->
             <van-form @submit="onSubmit">
                 <van-cell-group inset>
-                    <van-field v-model="username" name="用户名" label="用户名" placeholder="用户名"
-                        :rules="[{ required: true, message: '请填写用户名' }]" />
-                    <van-field v-model="password" type="password" name="密码" label="密码" placeholder="密码"
-                        :rules="[{ required: true, message: '请填写密码' }]" />
+                    <van-field v-model="username" name="用户名" label="用户名" placeholder="用户名"/>
+                    <van-field v-model="password" type="password" name="密码" label="密码" placeholder="密码"/>
                 </van-cell-group>
 
                 <input class="remenber" type="checkbox"><span class="remenber-pwd">记住密码</span>
                 <div style="margin: 16px;">
-                    <van-button round block type="primary" native-type="submit">
+                    <van-button round block type="primary" native-type="submit" @click="gotocontent">
                         提交
                     </van-button>
                 </div>
@@ -40,7 +38,11 @@
 
 <script>
 export default {
-
+    methods:{
+        gotocontent(){
+            this.$router.push({path:'/Content'})
+        }
+    }
 }
 </script>
 
@@ -66,7 +68,6 @@ export default {
     .logo-user {
         width: 100%;
         height: 200px;
-        background-color: #ccc;
         display: flex;
         justify-content: center;
         align-items: center;
