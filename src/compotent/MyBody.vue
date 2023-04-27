@@ -95,8 +95,8 @@ export default {
     const showCenter = ref(false);
     const active = ref(true);
     const showSelect = ref(true);
-    const showGood = ref(true);
-    const showTask = ref(true);
+    const showGood = ref(false);
+    const showTask = ref(false);
     return {
       activeId,
       activeIndex,
